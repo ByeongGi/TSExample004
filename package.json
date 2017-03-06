@@ -1,0 +1,36 @@
+{
+  "name": "typescrpt_example003",
+  "version": "1.0.0",
+  "description": "타입스크립트 예제(서버사이드 정리)",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "npm run build && npm run start",
+    "start": "webpack-dev-server --hot --inline --open",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "webpack --config ./webpack.client.config.js",
+    "build:server": "webpack --config ./webpack.server.config.js"
+  },
+  "author": "ByeongGiKim",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.26.2",
+    "lodash": "^4.17.4",
+    "request": "^2.80.0",
+    "response": "^0.18.0",
+    "source-map-loader": "^0.1.6",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "typings": "^2.1.0",
+    "vue": "^2.2.1",
+    "vue-loader": "^11.1.4",
+    "vue-property-decorator": "^4.0.0",
+    "vue-template-compiler": "^2.2.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "express": "^4.15.0"
+  },
+  "keywords": []
+}

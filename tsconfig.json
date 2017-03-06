@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "dom",
+            "es5"
+            //"es2015.promise" // 이슈 대상 
+        ],
+        "module": "es2015",
+        "moduleResolution": "node"  
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
