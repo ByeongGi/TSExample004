@@ -4,13 +4,12 @@
 module.exports = {
   entry: './client/client.ts',
   output: {
-    filename: './build/client.js',
-    path: __dirname
+    filename: 'client.js',
+    path: __dirname +/build/
   },
    devServer: {
-      inline: true,
       port: 7779,
-      contentBase: __dirname + '/build/'
+      contentBase: __dirname+ '/build'
   },
   devtool: 'source-map',
   module: {

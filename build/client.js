@@ -9473,12 +9473,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 
-var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-    el: '#app',
+var appConfig = {
+    el: '#exam_1',
     data: {
-        message: '안녕하세요 Vue!'
+        message: '안녕하세요  ddddddddddddd11ddd Vue!'
     }
-});
+};
+var exam_1 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(appConfig);
+var exam_2 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({});
 
 
 /***/ })

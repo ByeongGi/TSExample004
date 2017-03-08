@@ -4,8 +4,8 @@
 module.exports = {
   entry: './client/client.ts',
   output: {
-    filename: './build/client.js',
-    path: __dirname
+    filename: 'client.js',
+    path: __dirname +'/build/'
   },
    devServer: {
       inline: true,

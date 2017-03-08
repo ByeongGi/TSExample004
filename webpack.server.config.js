@@ -1,8 +1,8 @@
 module.exports = {
  entry: './server/app/server.ts',
  output: {
-   filename: './build/server.js',
-   path: __dirname
+   filename: 'server.js',
+   path: __dirname + '/build/'
  },
  target: 'node', // Server side  trans Complie 시에 정상적인 빌드가 되지 위해서는 이 설정이 필요하다. 
  module: {
