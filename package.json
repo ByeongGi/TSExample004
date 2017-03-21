@@ -13,6 +13,8 @@
   "author": "ByeongGiKim",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "cheerio": "^0.22.0",
     "css-loader": "^0.26.2",
     "lodash": "^4.17.4",
     "request": "^2.80.0",
@@ -22,15 +24,17 @@
     "typescript": "^2.2.1",
     "typings": "^2.1.0",
     "vue": "^2.2.1",
+    "vue-class-component": "^5.0.0",
     "vue-loader": "^11.1.4",
-    "vue-property-decorator": "^4.0.0",
-    "vue-template-compiler": "^2.2.1",
+    "vue-ts-loader": "0.0.3",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
     "es6-promise": "^4.0.5",
-    "express": "^4.15.0"
+    "express": "^4.15.0",
+    "jasmine-node": "^1.14.5",
+    "vue-property-decorator": "^4.0.0"
   },
   "keywords": []
 }

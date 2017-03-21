@@ -9476,11 +9476,51 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var appConfig = {
     el: '#exam_1',
     data: {
-        message: '안녕하세요  ddddddddddddd11ddd Vue!'
+        message: '안녕하세요 TEST HOT LOAD Vue!'
     }
 };
 var exam_1 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(appConfig);
-var exam_2 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({});
+var appConfig_2 = {
+    el: '#exam_2',
+    data: {
+        message: '이 페이지는 ' + new Date() + ' 에 로드 되었습니다'
+    }
+};
+var exam_2 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(appConfig_2);
+var appConfig_3 = {
+    el: '#exam_3',
+    data: {
+        seen: true
+    }
+};
+var exam_3 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(appConfig_3);
+var appConfig_4 = {
+    el: '#exam_4',
+    data: {
+        todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+        ]
+    }
+};
+var exam_4 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(appConfig_4);
+var appConfig_5 = {
+    el: '#exam_5',
+    data: {
+        message: 'Reverse Test'
+    },
+    methods: {
+        callBackFun: function () {
+            console.log(this);
+            this.message = this.message
+                .split('')
+                .reverse()
+                .join('');
+        }
+    }
+};
+var exam_5 = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(appConfig_5);
 
 
 /***/ })

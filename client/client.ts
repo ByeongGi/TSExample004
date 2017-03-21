@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
-const appConfig: any = {
+
+const appConfig: any = {      
     el: '#exam_1',
     data: {
         message: '안녕하세요 TEST HOT LOAD Vue!'
@@ -26,7 +27,7 @@ const appConfig_3: any = {
 };
 
 var exam_3: Vue = new Vue(appConfig_3);
-
+ 
 
 const appConfig_4 = {
     el: '#exam_4',
@@ -59,5 +60,3 @@ const appConfig_5: any = {
 };
 
 var exam_5 : Vue = new Vue(appConfig_5);
-
-
