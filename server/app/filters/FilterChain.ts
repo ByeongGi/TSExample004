@@ -3,21 +3,9 @@ import { Filter } from './Filter';
 import { FilterConfig } from './FilterConfig';
 
 
-export class FilterChain implements Filter {
+export interface FilterChain {
 
-
-    filter: FilterConfig;
-
-    doFilter(req: Request, res: Response, next: NextFunction) 
-    {
-        console.log("SecurityFilter!!!!");
-
-        next();
-    }
-
-    initFilter(filter: FilterConfig)
-    {
-        this.filter = filter;
-    }
+    // init():void;
+    doFilter(req: Request, res: Response):any;
     
 }
