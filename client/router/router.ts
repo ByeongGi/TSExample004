@@ -1,0 +1,13 @@
+
+import VueRouter from 'vue-router';
+
+const routes = [  
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar },
+    { path: '/list', component: List }
+];
+
+// SPA 개발시에 자체 Vue에서 제공하는 VueRouter 객체
+const router: VueRouter = new VueRouter({
+    routes
+});

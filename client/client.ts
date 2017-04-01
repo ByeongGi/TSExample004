@@ -1,62 +1,35 @@
-import Vue from 'vue';
+import * as Vue from 'vue';
+import App from './application/app.vue';
+import Header from './application/header.vue';
+import Footer from './application/footer.vue';
+import List  from './application/biz/list.vue';
+// VueRouter 사용 명시 
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
+// 1. Define route components.
+// These can be imported from other files
+const Foo = { template: '<div>foo</div>' }  
+const Bar = { template: '<div>bar</div>' }
+
+const routes = [  
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar },
+    { path: '/list', component: List }
+];
+
+// SPA 개발시에 자체 Vue에서 제공하는 VueRouter 객체
+const router: VueRouter = new VueRouter({
+    routes
+});
 
 
-const appConfig: any = {      
-    el: '#exam_1',
-    data: {
-        message: '안녕하세요 TEST HOT LOAD Vue!'
-    }
-};
-
-var exam_1: Vue = new Vue(appConfig);
-
-const appConfig_2: any = {
-    el: '#exam_2',
-    data: {
-        message: '이 페이지는 ' + new Date() + ' 에 로드 되었습니다'
-    }
-};
-var exam_2: Vue = new Vue(appConfig_2);
-
-
-const appConfig_3: any = {
-    el: '#exam_3',
-    data: {
-        seen: true
-    }
-};
-
-var exam_3: Vue = new Vue(appConfig_3);
+// 전역적으로 커스터 태크를 등록하는 방법
+Vue.component('app-header', Header );
+Vue.component('app-footer', Footer );
+Vue.component('app', App);
  
 
-const appConfig_4 = {
-    el: '#exam_4',
-    data: {
-        todos: [
-            { text: 'Learn JavaScript' },
-            { text: 'Learn Vue' },
-            { text: 'Build something awesome' }
-        ]
-    }
-};
-
-var exam_4 = new Vue(appConfig_4);
-
-
-const appConfig_5: any = {
-    el: '#exam_5',
-    data : {
-        message : 'Reverse Test'
-    },
-    methods:{
-        callBackFun: function(){ // Arrow Function 은 자동으로 Scope를  바인딩 하지 않음
-            console.log(this);
-            this.message = this.message
-                               .split('')
-                               .reverse()
-                               .join('');                               
-        }
-    }
-};
-
-var exam_5 : Vue = new Vue(appConfig_5);
+const app: Vue = new Vue({
+    router 
+}).$mount('#app');

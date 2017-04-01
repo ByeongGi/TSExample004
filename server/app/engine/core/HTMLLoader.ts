@@ -22,7 +22,11 @@ export default class HTMLLoader {
         return cheerio.load(this.cacheHtml);
     }
 
-
+    /**
+     * 
+     * @method 
+     * @description
+     */
     public findDataAtHtml() {
         let $html = this.load();
         let targetDataList = this.parserRoles.map((elem, index, array) => {

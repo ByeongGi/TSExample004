@@ -7,8 +7,8 @@ import { FilterConfig } from './FilterConfig';
  *  @description Filter interface
  */
 export interface Filter {
-    filter: FilterConfig;
-    initFilter(filter: FilterConfig): void;
+    filterConfig: FilterConfig;
+    initFilter(filterConfig: FilterConfig): void;
     doFilter(req: Request, res: Response): any;
 }
 

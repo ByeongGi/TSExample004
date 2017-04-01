@@ -4,7 +4,7 @@ import * as express from 'express';
 import { Request, Response, NextFunction } from 'express';
 
 // Import WelcomeController from controllers entry point
-import { WelcomeController, ServiceController } from './controllers';
+// import { WelcomeController, ServiceController } from './controllers';
 
 // Filter
 import { DelegateFilterChain , Filter, SecurityFilter , EncodingFilter} from './filters';

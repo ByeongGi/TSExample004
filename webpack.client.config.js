@@ -1,6 +1,8 @@
 /**
  * Webpack client bulid 설정
  */
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   entry: './client/client.ts',
   output: {
@@ -25,17 +27,24 @@ module.exports = {
         use: "source-map-loader"
       },
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         loader: 'ts-loader',
-        exclude: /node_modules|vue\/src/,
+        exclude: /node_modules|vue\/client/,
         options: {
-          appendTsSuffixTo: [/\.vue$/]
+          appendTsSuffixTo: [/\.vue$/]  
         }
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
+           loaders :{
+             sass: ExtractTextPlugin.extract({ 
+                   fallback: 'vue-style-loader',
+                  //resolve-url-loader may be chained before sass-loader if necessary
+                   use: ['css-loader', 'sass-loader']
+                })
+           }, 
           esModule: true
         }
       }
@@ -47,4 +56,9 @@ module.exports = {
     },
     extensions: [".tsx", ".ts", ".js", ".vue"]
   },
+   plugins:[
+       new ExtractTextPlugin({
+         filename : 'style.css'
+       })
+   ]
 };

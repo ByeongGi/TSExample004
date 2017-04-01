@@ -4,16 +4,23 @@ import { Request, Response, NextFunction } from 'express';
 
 export default class EncodingFilter implements Filter {
 
-    filter: FilterConfig;
-    doFilter(req: Request, res: Response) 
-    {   
-        console.log("START TIME :" + new Date());
-        console.log("EncodingFilter!!!!1");
+    public filterConfig: FilterConfig;
+    private encoding :string;
+
+    public constructor(encoding: string = 'UTF-8') {
+        this.encoding = encoding;
     }
 
-    initFilter(filter: FilterConfig)
-    {
-        this.filter = filter;
+    doFilter(req: Request, res: Response) {
+        // Encoding setting 
+        // console.log("START TIME :" + new Date());
+        // console.log("EncodingFilter!!!!1");
+        req.setEncoding(this.encoding);
+        // res.setHeader()
+    }
+
+    initFilter(filterConfig: FilterConfig) {
+        this.filterConfig = filterConfig;
     }
 
 }

@@ -4,18 +4,19 @@ import { Request, Response, NextFunction } from 'express';
 
 export default class SecurityFilter implements Filter {
 
-    filter: FilterConfig;
+    filterConfig: FilterConfig;
     doFilter(req: Request, res: Response) 
     {
         console.log("START TIME :" + new Date());
-        console.log(req.param('test'));
-        // console.log(res);
         console.log("SecurityFilter!!!!1");
+        console.log(req.query);
+        let params :any = req.query;
+        
     }
 
-    initFilter(filter: FilterConfig)
+    initFilter(filterConfig: FilterConfig)
     {
-        this.filter = filter;
+        this.filterConfig = filterConfig;
     }
 
 }
