@@ -1,16 +1,20 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import RequestMapping from '../anonotation/RequestMapping';
+import Controller from '../anonotation/Controller';
 
-
+@Controller
 class ServiceController {
           
     @RequestMapping('/')
     public index(): void {
-
+        console.log("TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 
 
 }
+
+
+export default ServiceController;
 
 
 // const router: Router = Router();

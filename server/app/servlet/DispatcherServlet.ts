@@ -1,4 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express';
+import SeverceController from "../controllers";
 
 const router : Router = Router();
 
@@ -20,6 +21,8 @@ router.use((req: Request, res: Response , next:NextFunction) => {
     res.send("service call!");
     console.log("service end");
     console.log("=====================================================");
+
+    new SeverceController().index();
     next(); 
 });
 

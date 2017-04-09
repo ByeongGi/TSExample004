@@ -29,7 +29,7 @@ module.exports = {
         use: "source-map-loader"
       },
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         loader: 'ts-loader',
         exclude: /node_modules|vue\/client/,
         options: {

@@ -1,7 +1,4 @@
-import { WelcomeController } from './WelcomeController';
-// import { ServiceController } from './ServiceController';
+// import { WelcomeController } from './WelcomeController';
+import ServiceController  from './ServiceController';
 
-
-
-
-// export { WelcomeController, ServiceController };
+export default ServiceController ;
